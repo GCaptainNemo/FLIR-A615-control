@@ -4,7 +4,7 @@
 
 利用FLIR提供的ATLAS .NET SDK，在FLIR官方提供的demo基础上修改FLIR A615控制客户端，可以进行相机连接、采图、自动对焦等操作。
 
-在记录获得.seq文件后，通过loadDatafromJpg.m的Matlab文件可以将.seq文件转化为FLIR A615相机原始文件。
+在记录获得.seq文件后，通过imgs2raw.m的Matlab文件可以将.seq文件转化为FLIR A615相机原始文件。
 
 
 
