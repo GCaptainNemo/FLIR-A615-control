@@ -204,7 +204,7 @@ namespace ThermalImageStreamerDemo
             var dialog = new FolderBrowserDialog();
             if (dialog.ShowDialog() == DialogResult.OK)
             {
-                labelOutputPath.Text = dialog.SelectedPath;
+                labelOutputPath.Text = dialog.SelectedPath + "\\";
             }
         }
 
@@ -363,13 +363,21 @@ namespace ThermalImageStreamerDemo
 
         private void button8_Click(object sender, EventArgs e)
         {
-            String file_name = GetNextFileName(false);
+            // save SNAPSHOT
+            String file_path = GetNextFileName(false);
 
-            _stream.GetImage().SaveSnapshot(file_name);
-
+            _stream.GetImage().SaveSnapshot(file_path);
+            String [] lst = file_path.Split('\\');
+            var lv = new ListViewItem(lst[lst.Length - 1]) { Tag = file_path };
+            listViewRecordings.Items.Add(lv);
         }
 
         private void listViewRecordings_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
         {
 
         }

@@ -72,10 +72,10 @@
             // buttonPause
             // 
             this.buttonPause.Enabled = false;
-            this.buttonPause.Location = new System.Drawing.Point(700, 970);
+            this.buttonPause.Location = new System.Drawing.Point(284, 1059);
             this.buttonPause.Margin = new System.Windows.Forms.Padding(10);
             this.buttonPause.Name = "buttonPause";
-            this.buttonPause.Size = new System.Drawing.Size(168, 74);
+            this.buttonPause.Size = new System.Drawing.Size(252, 74);
             this.buttonPause.TabIndex = 36;
             this.buttonPause.Text = "Pause";
             this.buttonPause.UseVisualStyleBackColor = true;
@@ -84,10 +84,10 @@
             // labelOutputPath
             // 
             this.labelOutputPath.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelOutputPath.Location = new System.Drawing.Point(66, 1504);
+            this.labelOutputPath.Location = new System.Drawing.Point(294, 970);
             this.labelOutputPath.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
             this.labelOutputPath.Name = "labelOutputPath";
-            this.labelOutputPath.Size = new System.Drawing.Size(796, 58);
+            this.labelOutputPath.Size = new System.Drawing.Size(564, 79);
             this.labelOutputPath.TabIndex = 23;
             this.labelOutputPath.Text = "Path";
             this.labelOutputPath.Click += new System.EventHandler(this.labelOutputPath_Click);
@@ -95,10 +95,10 @@
             // buttonRec
             // 
             this.buttonRec.Enabled = false;
-            this.buttonRec.Location = new System.Drawing.Point(511, 970);
+            this.buttonRec.Location = new System.Drawing.Point(50, 1059);
             this.buttonRec.Margin = new System.Windows.Forms.Padding(10);
             this.buttonRec.Name = "buttonRec";
-            this.buttonRec.Size = new System.Drawing.Size(168, 74);
+            this.buttonRec.Size = new System.Drawing.Size(205, 74);
             this.buttonRec.TabIndex = 35;
             this.buttonRec.Text = "Rec";
             this.buttonRec.UseVisualStyleBackColor = true;
@@ -322,7 +322,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(556, 1102);
+            this.button1.Location = new System.Drawing.Point(568, 1146);
             this.button1.Margin = new System.Windows.Forms.Padding(10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(312, 74);
@@ -333,7 +333,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(284, 1102);
+            this.button2.Location = new System.Drawing.Point(284, 1146);
             this.button2.Margin = new System.Windows.Forms.Padding(10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(252, 74);
@@ -410,7 +410,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(66, 1102);
+            this.button8.Location = new System.Drawing.Point(50, 1146);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(205, 74);
             this.button8.TabIndex = 43;
