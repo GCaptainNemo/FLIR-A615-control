@@ -142,9 +142,10 @@ namespace ThermalImageStreamerDemo
                 }
                
                 buttonRec.Text = "Stop";
-                _stream.Recorder.Start(GetNextFileName());
+                _stream.Recorder.Start(GetNextFileName(true));
                 _elapedTimeRecording.Reset();
                 _elapedTimeRecording.Start();
+                
             }
             else
             {
@@ -156,22 +157,31 @@ namespace ThermalImageStreamerDemo
             }
         }
 
-        private string GetNextFileName()
+        private string GetNextFileName(bool is_seq)
         {
             string fileName;
             do
             {
-                fileName = CreateFileName();
+                fileName = CreateFileName(is_seq);
             } while (System.IO.File.Exists(fileName));
             return fileName;
         }
 
         private int _nextIndex = 1;
-        private string CreateFileName()
+        private string CreateFileName(bool is_seq)
         {
-            var fileName = labelOutputPath.Text;
-            fileName += string.Format("{0:0000}", _nextIndex++);
-            return fileName + _stream.Recorder.Extension;
+            if (is_seq)
+            {
+                var fileName = labelOutputPath.Text;
+                fileName += string.Format("{0:0000}", _nextIndex++);
+                return fileName + _stream.Recorder.Extension;
+            }
+            else {
+                var fileName = labelOutputPath.Text;
+                fileName += string.Format("{0:0000}", _nextIndex++);
+                return fileName + ".jpg";
+
+            }
         }
 
         private void buttonPause_Click(object sender, EventArgs e)
@@ -286,7 +296,6 @@ namespace ThermalImageStreamerDemo
 
         private void labelOutputPath_Click(object sender, EventArgs e)
         {
-
         }
 
   
@@ -350,6 +359,19 @@ namespace ThermalImageStreamerDemo
             double dist = _stream.RemoteControl.Focus.GetDistance();
             Console.WriteLine("Focus(m):" + dist.ToString());
             label4.Text = "Focus(m):" + dist.ToString();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            String file_name = GetNextFileName(false);
+
+            _stream.GetImage().SaveSnapshot(file_name);
+
+        }
+
+        private void listViewRecordings_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
