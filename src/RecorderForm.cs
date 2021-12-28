@@ -274,7 +274,7 @@ namespace ThermalImageStreamerDemo
 
         private void RecorderForm_Load(object sender, EventArgs e)
         {
-        
+            this.BackgroundImageLayout = ImageLayout.Stretch;
         }
 
         private void button2_Click(object sender, EventArgs e)
